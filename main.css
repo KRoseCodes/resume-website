@@ -1,0 +1,414 @@
+/*
+Theme Name: VCARD
+Description: Designed by <a href="http://themeforest.net/user/josweb">josweb</a>.
+Version: 2
+Author: <a href="http://www.spiralpixel.com">Jo</a>
+*/
+
+/*  TOC
+    ........................................................................................................................................ */
+
+01. ACCORDIAN 
+		1. General
+		2. Rounded Corners
+		3. Grey Theme
+		
+02. TYPOGRAPHY & STYLING
+		a. Font Replacement
+		b. Headings & Links
+		c. Columns & Styling
+		
+03. PAGES
+		1. Skills
+		2. Social
+		3. Contact
+		4. Google Map, Clears & Copyright
+		5. Tip Tip
+		
+*/
+
+/*  1. ACCORDIAN
+    ........................................................................................................................................ */
+
+/* 1: General */
+.accordion { 
+	text-align: left;
+	-webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    -webkit-tap-highlight-color: transparent;
+}
+.accordion ol {
+	position: relative;
+	overflow: hidden;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.accordion li > h2 { 
+	font-weight: normal;
+	margin: 0;
+	z-index: 2;
+	position: absolute;
+	top: 0;
+	left: 0;
+	-webkit-backface-visibility: hidden; /* fixes chrome bug */
+    -webkit-transform: translateX(-100%) rotate(-90deg);
+    -webkit-transform-origin: right top;
+    -moz-transform: translateX(-100%) rotate(-90deg);
+    -moz-transform-origin: right top;
+    -o-transform: translateX(-100%) rotate(-90deg);
+    -o-transform-origin: right top;
+    transform: translateX(-100%) rotate(-90deg);
+    transform-origin: right top;
+}
+.accordion li > h2 span { 
+	display: block;
+	padding-right: 7%;
+	text-align: right;
+	height: 90%;
+	margin-top: 5px;
+	-webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.accordion li > h2 b { 
+	display: inline-block;
+	position: absolute; top: 10%;
+	left: 7%;
+	text-align: center;
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg); -o-transform: rotate(90deg);
+	transform: rotate(90deg); 
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+}
+.accordion li > h2:hover { cursor: pointer; color:#555;}
+.accordion li > div { 
+	height: 100%;
+	position: absolute;
+	top:0; 
+	z-index: 1; 
+	overflow: hidden; 
+	background: white;
+}
+.accordion noscript p { padding: 10px; margin: 0; background: white; }
+
+.liteAccordion.ie .slide > h2,
+.liteAccordion.ie .slide > h2 span,
+.liteAccordion.ie .slide > h2 b { filter: none; -ms-filter: none; -ms-transform: none }
+.liteAccordion.ie7 .slide > h2 { filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3) }
+.liteAccordion.ie7 .slide > h2 b { filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1) }
+.liteAccordion.ie8 .slide > h2 { -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)" }
+.liteAccordion.ie8 .slide > h2 b { -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)" }
+.liteAccordion.ie9 .slide > h2 { -ms-transform: translateX(-100%) rotate(-90deg); -ms-transform-origin: right top }
+.liteAccordion.ie9 .slide > h2 b { -ms-transform: rotate(90deg) }
+.accordion.ie8  h2 b { position: absolute; top: 20px; left: 2%;}
+
+/* 2: Rounded Corners */
+.rounded { -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }
+
+/* 3: Grey Theme */
+.grey { border: 3px solid #fff; padding: 0px 0px; background: #fff; }
+.grey li > h2 { background-image:url(images/dark_grid.jpg); background-repeat:repeat;
+font: normal 18px 'DroidSerifRegular', Arial, sans-serif; color: #555; line-height: 2.4em; text-shadow: 0 -1px 0 #fff; }
+.grey li > h2 span {border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; border-right: 1px solid #ccc; background-image:url(images/check.jpg); background-repeat:repeat; }
+/* number ++++++++++++++++++++++++++++++++++++++++++++ */
+.grey li > h2 b {  color: #999; font-size: 20px; background-image:url(images/check.jpg); background-repeat:repeat; }
+.grey li > h2 b:hover, .grey li > h2 :hover {  color: #777; }
+
+/* page background ++++++++++++++++++++++++++++++++++++++++++++ */
+.grey li > div {  background-color: #F9F9F9; height: 418px; border: 1px solid #ededed; }
+
+
+/*  2. TYPOGRAPHY
+    ........................................................................................................................................ */
+
+/* A: FONT REPLACEMENT */
+
+<style type="text/css">
+@font-face {
+    font-family: 'Denne-Shuffle-Euro-Hollow';
+    src: url(Denne-Shuffle-Euro-Hollow.ttf) format("truetype");
+}  
+@font-face {
+    font-family: 'DroidSansRegular';
+    src: url('style/font/DroidSans-webfont.eot');
+    src: url('style/font/DroidSans-webfont.eot?#iefix') format('embedded-opentype'),
+         url('style/font/DroidSans-webfont.woff') format('woff'),
+         url('style/font/DroidSans-webfont.ttf') format('truetype'),
+         url('style/font/DroidSans-webfont.svg#DroidSansRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'DroidSansBold';
+    src: url('style/font/DroidSans-Bold-webfont.eot');
+    src: url('style/font/DroidSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('style/font/DroidSans-Bold-webfont.woff') format('woff'),
+         url('style/font/DroidSans-Bold-webfont.ttf') format('truetype'),
+         url('style/font/DroidSans-Bold-webfont.svg#DroidSansBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'DroidSerifRegular';
+    src: url('style/font/DroidSerif-Regular-webfont.eot');
+    src: url('style/font/DroidSerif-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('style/style/font/DroidSerif-Regular-webfont.woff') format('woff'),
+         url('style/font/DroidSerif-Regular-webfont.ttf') format('truetype'),
+         url('style/font/DroidSerif-Regular-webfont.svg#DroidSerifRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'DroidSerifItalic';
+    src: url('style/font/DroidSerif-Italic-webfont.eot');
+    src: url('style/font/DroidSerif-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('style/font/DroidSerif-Italic-webfont.woff') format('woff'),
+         url('style/font/DroidSerif-Italic-webfont.ttf') format('truetype'),
+         url('style/font/DroidSerif-Italic-webfont.svg#DroidSerifItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'BallparkWeiner';
+    src: url('style/font/ballpark_weiner-webfont.eot');
+    src: url('style/font/ballpark_weiner-webfont.eot?#iefix') format('embedded-opentype'),
+         url('style/font/ballpark_weiner-webfont.woff') format('woff'),
+         url('style/font/ballpark_weiner-webfont.ttf') format('truetype'),
+         url('style/font/ballpark_weiner-webfont.svg#BallparkWeiner') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* B: HEADING */
+
+/* your name */
+h1 { font: normal 42px 'DroidSerifItalic', Arial, sans-serif; color: #833c3e;  text-align: center; text-shadow: 0px 1px 0px #fcfcfc; margin: 0px 0px; }
+
+/* what you do */
+.title {text-transform: uppercase; font: normal 15px 'DroidSansRegular', Arial, sans-serif;  color: #222; text-align: center; margin: 10px 0px 20px 0px; }
+
+/* INTRO */
+/* page headings */
+h3 { font: normal 22px 'DroidSerifRegular', Arial, sans-serif; color: #333;
+background: url(images/line.png) bottom repeat-x; padding: 0px 0px 5px 0px; margin: 0px 0px; }
+
+/* italic headings */
+.intro { font: normal 14px/1.6em 'DroidSerifItalic', Arial, sans-serif; color: #666; margin: 10px 0 20px 0;}
+
+/* SUB HEADS */
+h4 { font: 14px 'DroidSerifRegular', Arial, sans-serif; color: #333; letter-spacing: 0.01em;
+background: url(images/line.png) bottom repeat-x; padding: 3px 0px 5px 0px; margin: 0px 0 8px 0; }
+
+h5 { font: 12px 'DroidSansBold', Arial, sans-serif; letter-spacing: 0.01em; color: #666; margin: 5px 0 2px 0 ;}
+
+/* LINKS */
+a { background-color: transparent; color: #777; outline: 0; text-decoration: none; } 
+a:hover { background-color: transparent; color: #666; outline: 0; text-decoration: none; }
+
+p {margin : 0 0 15px 0;}
+
+
+/*  C. COLUMNS & STYLING */
+
+/* 1: MAIN BOX */
+/* layout container */
+.container {margin: 0px auto; width: 980px; text-align: center; }
+/* vcard container */
+.figure { display: block; width: 660px; height: 360px; text-align: left; margin: 25px 30px 25px 30px;}
+
+/* 2: LEFT & RIGHT COLUMNS */
+.content-left { float: left; display: block; height: 250px; width: 310px; margin: 0px 0px; }
+.content-right { float: right; display: block; height: 250px; width: 310px; margin: 0px 0px; }
+
+/* 3:IMAGE STYLES */
+.fll  {padding: 4px; float: left; margin: 3px 10px 0px 0px; border: 1px solid #999; }
+.flr { padding: 4px; float: right; margin: 0px 0px; }
+
+
+/*  3. PAGES
+    ........................................................................................................................................ */
+
+/* 1: SKILLS */
+
+.skill { font: 12px 'DroidSerifRegular', Arial, sans-serif; letter-spacing: 0.01em; color: #333; float:left; margin: 4px 0 0px 0 ;}
+
+.star { margin: 0px 0px; float:right; }
+.bull { margin: 2px 3px 30px 0px; float:left; }
+.clear2 { background: url(images/line.png) bottom repeat-x; padding: 0px 0px 0px 0px; height:1px; margin:-40px 0px 12px 0px;}
+
+/* left text box ++++++++++++++++++++++++++++++++++++++++++++ */
+.skills_left_text {  width: 270px; height: 300px; float: left; margin: -15px 0px 20px 20px; }
+/* right text box ++++++++++++++++++++++++++++++++++++++++++++ */
+.skills_right_text {  width: 270px; height: 300px; float: right; margin: -15px 20px 20px 0px; }
+
+/* quotes/ testimonials */
+blockquote { font: normal 12px/18px  'DroidSerifItalic', Arial, sans-serif;  color: #666; width: 270px; padding: 0px 0px;  margin: 0px 0px; }
+blockquote cite {font: normal 11px 'DroidSerifItalic', Arial, sans-serif; color: #888; float: right; }
+
+/* 2: SOCIAL */
+.social-content-left { float: left; display: block; height: 250px; width: 130px; margin: 0px 40px 0px 0px; }
+.social-content-right { float: left; display: block; height: 250px; width: 130px; margin: 0px 0px; }
+
+/* icons */
+.icon { float:left; font-weight: normal; margin: -20px 0px 0px -65px; color: #555; padding:5px 0px 0px 0px;} 
+
+/* links */
+.social { float:left; margin: 10px 0px 0 60px;font: normal 12px 'DroidSansRegular', Arial, sans-serif; text-align: left; color: #888; }
+.social a:hover {  color: #888; text-decoration: none; }
+.clear2 { height: 65px; }
+
+/* 3: CONTACT */
+/* contact form */
+.hide { font: normal 9px 'DroidSerifRegular', Arial, sans-serif; display: none; color: #444; }
+input { outline: none; display: block; }
+#form_name, #form_email, textarea { font: normal 13px 'DroidSansRegular', Arial, sans-serif; margin: -38px 0px 20px 70px; padding: 5px;
+width: 220px;border: 0px solid #ccc; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;}
+.label { font: normal 12px 'DroidSansRegular', Arial, sans-serif; margin-top: 10px; color: #666; }
+textarea { font: normal 12px 'DroidSansRegular', Arial, sans-serif; width: 220px; height: 127px; padding: 5px; margin: -37px 0px 4px 70px; }
+#form_submit { font: normal 11px 'DroidSansBold', Arial, sans-serif; letter-spacing: 1px; outline: 0; padding: 0px 5px;
+background: transparent url(images/form_button.png) no-repeat 0px 0px; height: 32px; width: 80px; text-decoration: none; color: #fff; border: none; text-transform: uppercase; cursor: pointer; margin-left: 67px;  }
+#form_name, #form_email, textarea { background: #f9f9f9 url(images/form-gradient.gif) repeat-x  0px -2px; border: #ccc #edede #fff;
+border-style: solid; border-width: 1px; color: #666; }
+#reset { font: normal 11px 'DroidSansRegular', Arial, sans-serif; outline: 0; padding: 0px 5px; height: 32px; width: 80px; text-decoration: none; float: right;
+background-color:transparent;color: #555; border: none;  cursor: pointer; margin: -30px 0px 0px 67px;  }
+/*for FireFox*/
+    input[type="submit"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner 
+ , input[type="reset"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner 
+
+    {  border : 0px;
+    } 
+/*for IE8 */
+    input[type="reset"]:focus, input[type="button"]:focus 
+ , input[type="submit"]:focus, input[type="button"]:focus
+    {  outline : none; 
+    }
+
+/*  contact links  */
+.contact {color:#666; padding: 0px 0px;  }
+.contact a { color: #666;  }
+.contact a:hover { color: #888;  }
+ul { list-style-type:none;}
+.contact li{
+	display:block;
+	padding:0px 0px 0 40px;
+	line-height:20px;
+	margin:0px 0px 8px 0px;
+}
+li.contact_icon { background-image: url(images/pencil.png); background-repeat:no-repeat; background-position:-3px -5px;}
+li.phone_icon {  background-image: url(images/telephone.png); background-repeat:no-repeat; background-position:-3px -6px; }
+li.email_icon { background-image: url(images/email.png); background-repeat:no-repeat; background-position:-3px -6px;}
+li.home_icon {  background-image: url(images/home.png); background-repeat:no-repeat; background-position:-4px -7px; }
+li.vcard_icon { background-image: url(images/vcard.png); background-repeat:no-repeat; background-position:-6px -6px; }
+	
+/* 4: GOOGLE MAP */
+/* google map */									
+#map {border: 1px solid #ccc; width: 300px; height: 85px; margin-bottom: 15px;}	
+/* hide direction arrows */									
+.gmnoprint {display:none; }
+
+/* extras  */
+.clear { height:5px; margin: 0px 0px; }
+.clear3 { margin: 0px 0px; height: 16px; }
+.clear4 { height:65px; margin: 0px 0px; }
+.clear5 { height:19px; margin: 0px 0px; }
+.copyright{ font: normal 11px 'DroidSansRegular', Arial, sans-serif; color: #222; text-align: center; margin: 30px 0px 0px 0px; } 
+.copyright a{ color: #222; } 
+.copyright a:hover{ color: #444; } 
+
+/* 5: TIP TIP */
+#tiptip_holder {
+	display: none;
+	position: absolute;
+	top: 0;font-family: "Trebuchet MS";
+	left: 0;
+	z-index: 99999;
+}
+
+#tiptip_holder.tip_top { padding-bottom: 5px; }
+#tiptip_holder.tip_bottom { padding-top: 5px; }
+#tiptip_holder.tip_right { padding-left: 5px; }
+#tiptip_holder.tip_left { padding-right: 5px; }
+#tiptip_content {
+	font-size: 11px;
+	color: #fff;
+	text-shadow: 0 0 2px #000;
+	padding: 4px 8px;
+	border: 1px solid rgba(255,255,255,0.25);
+	background-color: rgb(25,25,25);
+	background-color: rgba(25,25,25,0.92);
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(transparent), to(#000));
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	box-shadow: 0 0 3px #555;
+	-webkit-box-shadow: 0 0 3px #555;
+	-moz-box-shadow: 0 0 3px #555;
+}
+
+#tiptip_arrow, #tiptip_arrow_inner {
+	position: absolute;
+	border-color: transparent;
+	border-style: solid;
+	border-width: 6px;
+	height: 0;
+	width: 0;
+}
+#tiptip_holder.tip_top #tiptip_arrow {
+	border-top-color: #fff;
+	border-top-color: rgba(255,255,255,0.35);
+}
+#tiptip_holder.tip_bottom #tiptip_arrow {
+	border-bottom-color: #fff;
+	border-bottom-color: rgba(255,255,255,0.35);
+}
+#tiptip_holder.tip_right #tiptip_arrow {
+	border-right-color: #fff;
+	border-right-color: rgba(255,255,255,0.35);
+}
+#tiptip_holder.tip_left #tiptip_arrow {
+	border-left-color: #fff;
+	border-left-color: rgba(255,255,255,0.35);
+}
+#tiptip_holder.tip_top #tiptip_arrow_inner {
+	margin-top: -7px;
+	margin-left: -6px;
+	border-top-color: rgb(25,25,25);
+	border-top-color: rgba(25,25,25,0.92);
+}
+#tiptip_holder.tip_bottom #tiptip_arrow_inner {
+	margin-top: -5px;
+	margin-left: -6px;
+	border-bottom-color: rgb(25,25,25);
+	border-bottom-color: rgba(25,25,25,0.92);
+}
+#tiptip_holder.tip_right #tiptip_arrow_inner {
+	margin-top: -6px;
+	margin-left: -5px;
+	border-right-color: rgb(25,25,25);
+	border-right-color: rgba(25,25,25,0.92);
+}
+#tiptip_holder.tip_left #tiptip_arrow_inner {
+	margin-top: -6px;
+	margin-left: -7px;
+	border-left-color: rgb(25,25,25);
+	border-left-color: rgba(25,25,25,0.92);
+}
+/* Webkit Hacks  */
+@media screen and (-webkit-min-device-pixel-ratio:0) {	
+	#tiptip_content {
+		padding: 4px 8px 5px 8px;
+		background-color: rgba(45,45,45,0.88);
+	}
+	#tiptip_holder.tip_bottom #tiptip_arrow_inner { 
+		border-bottom-color: rgba(45,45,45,0.88);
+	}
+	#tiptip_holder.tip_top #tiptip_arrow_inner { 
+		border-top-color: rgba(20,20,20,0.92);
+	}
+}
+
+

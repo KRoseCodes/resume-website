@@ -1,0 +1,97 @@
+/* Nivo SLider */
+ .nivoSlider {
+	position:relative;
+	width:100%;
+	height:auto;
+	overflow hidden;
+}
+.nivoSlider img { position absolute; top:0px; left:0px; max-width:none; }
+.nivo-main-image {
+	display: block !important;
+	position: relative !important; 
+	width: 100% !important;
+}
+
+/* The slices and boxes in the Slider */
+.nivo-slice {
+	display:block;
+	position:absolute;
+	z-index:5;
+	height:100%;
+	top:0;
+}
+.nivo-box {
+	display:block;
+	position:absolute;
+	z-index:5;
+	overflow:hidden;
+}
+.nivo-box img { display:block; }
+.nivo-html-caption {  display:none; }
+.nivo-box {width: 10px; }
+.slider-wrapper { position:relative; margin:0 auto 20px auto; }
+
+/* Bacgkround, height & width */
+#slider-wrapper {
+	background-image: url(../../images/slider_bg.png); 
+	background-repeat:no-repeat;
+	width:330px;
+	height:269px;
+	align:center;
+	padding:4px;
+	margin-top:3px;
+}
+
+/* Images size */
+#slider {
+	position:relative;
+	width:315px;
+	height:224px;
+	margin:7px 0px 0px 3px;
+	background:url(../../images/loader.gif) no-repeat 50% 50%;
+}
+
+.nivoSlider img { position:absolute; top:0px; left:0; display:none; }
+.nivoSlider a { border:0; display:block; }
+
+/* Arrows */
+.nivo-directionNav a {
+	 display:block;
+    position: absolute !important;
+    z-index:10;
+    cursor:pointer;
+    top auto; left:auto;
+    bottom:95px; right:0px;
+    width: 30px !important;
+    height: 30px !important;
+    text-indent: -9999px;
+	background:url(../../images/arrows.png) no-repeat;
+    opacity: 0.6;
+}
+
+a.nivo-nextNav:hover,  .nivo-prevNav:hover  { opacity: 1; }
+a.nivo-nextNav { background-position: -30px 0px; right:15px; }
+a.nivo-prevNav { left:15px; }
+
+/* Bullets */
+.nivo-controlNav {
+	position:absolute;
+	left:0px;
+	bottom:25px;
+	left:90px;
+	z-index:200;
+}
+.nivo-controlNav { text-align: center; padding: 20px 0; }
+.nivo-controlNav a {
+	display:inline-block;
+	width:22px;
+	height:22px;
+	background:url(../../images/bullets.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+	margin:37px 0px 8px 4px;
+	float:left;
+}
+.nivo-controlNav a.active { background-position:0 -22px; }
+.clear { clear:both; }
+
